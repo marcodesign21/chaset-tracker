@@ -356,12 +356,8 @@ class ChasetApp {
                             <option value="entrata">Entrata</option>
                         </select>
                         <select id="tx-category" class="px-4 py-2 rounded-lg bg-white/5 border border-white/20 text-black focus:outline-none focus:border-purple-500">
-                            <option value="cibo">Cibo</option>
-                            <option value="trasporti">Trasporti</option>
-                            <option value="bollette">Bollette</option>
-                            <option value="stipendio">Stipendio</option>
-                            <option value="svago">Svago</option>
-                            <option value="altro">Altro</option>
+                            <option value="Ricavati">Ricavati</option>
+                            <option value="Dati">Dati</option>
                         </select>
                         <input type="date" id="tx-date" value="${this.getTodayDate()}"
                             class="px-4 py-2 rounded-lg bg-white/5 border border-white/20 text-black focus:outline-none focus:border-purple-500">
@@ -515,3 +511,4 @@ if (document.readyState === 'loading') {
     app = new ChasetApp();
 
 }
+
