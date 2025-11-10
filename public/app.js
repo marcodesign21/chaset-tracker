@@ -233,14 +233,14 @@ class ChasetApp {
     
     getLoginHTML() {
         return `
-            <div class="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-6">
+            <div class="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 flex items-center justify-center p-6">
                 <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 w-full max-w-md">
                     <div class="text-center mb-8">
                         <div class="inline-block p-4 bg-blue-600 rounded-full mb-4">
                             <i data-lucide="lock" class="text-white" style="width: 32px; height: 32px;"></i>
                         </div>
                         <h1 class="text-3xl font-bold text-white mb-2">Chaset</h1>
-                        <p class="text-purple-200">Accedi al tuo account</p>
+                        <p class="text-blue-200">Accedi al tuo account</p>
                     </div>
                     
                     <div class="space-y-4 mb-6">
@@ -257,7 +257,7 @@ class ChasetApp {
                     </div>
                     
                     <button onclick="app.login()" 
-                        class="w-full px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-semibold flex items-center gap-2 justify-center transition-all">
+                        class="w-full px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold flex items-center gap-2 justify-center transition-all">
                         <i data-lucide="log-in"></i>
                         Accedi
                     </button>
@@ -286,7 +286,7 @@ class ChasetApp {
                             <div class="flex-1"></div>
                             <div class="flex-1 text-center">
                                 <h1 class="text-4xl font-bold text-white mb-2">Chaset</h1>
-                                <p class="text-purple-200">Benvenuto, ${this.currentUser.username}!</p>
+                                <p class="text-blue-200">Benvenuto, ${this.currentUser.username}!</p>
                             </div>
                             <div class="flex-1 flex justify-end">
                                 <button onclick="app.logout()" 
@@ -337,7 +337,7 @@ class ChasetApp {
                     </div>
                     <div class="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
                         <div class="flex items-center gap-3 mb-2">
-                            <i data-lucide="wallet" class="text-purple-400"></i>
+                            <i data-lucide="wallet" class="text-blue-400"></i>
                             <span class="text-white/80">Bilancio</span>
                         </div>
                         <p class="text-3xl font-bold ${balance >= 0 ? 'text-green-400' : 'text-red-400'}">€${balance.toFixed(2)}</p>
@@ -360,7 +360,7 @@ class ChasetApp {
                             <option value="Dati">Dati</option>
                         </select>
                         <input type="date" id="tx-date" value="${this.getTodayDate()}"
-                            class="px-4 py-2 rounded-lg bg-white/5 border border-white/20 text-black focus:outline-none focus:border-purple-500">
+                            class="px-4 py-2 rounded-lg bg-white/5 border border-white/20 text-black focus:outline-none focus:border-blue-500">
                     </div>
                     <button onclick="app.addTransaction()" 
                         class="w-full md:w-auto px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold flex items-center gap-2 justify-center transition-all">
@@ -439,7 +439,7 @@ class ChasetApp {
                                     <div class="flex items-start justify-between">
                                         <div class="flex-1">
                                             <h3 class="text-white font-bold text-lg mb-1">${cred.service}</h3>
-                                            <p class="text-purple-300 text-sm mb-2">${cred.email}</p>
+                                            <p class="text-blue-300 text-sm mb-2">${cred.email}</p>
                                             <div class="flex items-center gap-2">
                                                 <input type="${this.showPasswords[cred.id] ? 'text' : 'password'}" 
                                                     value="${cred.password}" readonly
@@ -511,4 +511,5 @@ if (document.readyState === 'loading') {
     app = new ChasetApp();
 
 }
+
 
