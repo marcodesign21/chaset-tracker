@@ -236,7 +236,7 @@ class ChasetApp {
             <div class="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-6">
                 <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 w-full max-w-md">
                     <div class="text-center mb-8">
-                        <div class="inline-block p-4 bg-purple-600 rounded-full mb-4">
+                        <div class="inline-block p-4 bg-blue-600 rounded-full mb-4">
                             <i data-lucide="lock" class="text-white" style="width: 32px; height: 32px;"></i>
                         </div>
                         <h1 class="text-3xl font-bold text-white mb-2">Chaset</h1>
@@ -279,7 +279,7 @@ class ChasetApp {
         const totalSpese = this.getTotalSpese();
         
         return `
-            <div class="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+            <div class="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
                 <div class="max-w-6xl mx-auto p-6">
                     <div class="text-center mb-8">
                         <div class="flex items-center justify-between mb-4">
@@ -300,12 +300,12 @@ class ChasetApp {
 
                     <div class="flex gap-4 mb-6">
                         <button onclick="app.switchTab('bilanci')" class="flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all ${
-                            this.activeTab === 'bilanci' ? 'bg-purple-600 text-white' : 'bg-white/10 text-white hover:bg-white/20'
+                            this.activeTab === 'bilanci' ? 'bg-blue-600 text-white' : 'bg-white/10 text-white hover:bg-white/20'
                         }">
                             <i data-lucide="wallet"></i> Bilanci
                         </button>
                         <button onclick="app.switchTab('credenziali')" class="flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all ${
-                            this.activeTab === 'credenziali' ? 'bg-purple-600 text-white' : 'bg-white/10 text-white hover:bg-white/20'
+                            this.activeTab === 'credenziali' ? 'bg-blue-600 text-white' : 'bg-white/10 text-white hover:bg-white/20'
                         }">
                             <i data-lucide="lock"></i> Credenziali
                         </button>
@@ -367,7 +367,7 @@ class ChasetApp {
                             class="px-4 py-2 rounded-lg bg-white/5 border border-white/20 text-black focus:outline-none focus:border-purple-500">
                     </div>
                     <button onclick="app.addTransaction()" 
-                        class="w-full md:w-auto px-6 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-semibold flex items-center gap-2 justify-center transition-all">
+                        class="w-full md:w-auto px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold flex items-center gap-2 justify-center transition-all">
                         <i data-lucide="plus-circle"></i> Aggiungi
                     </button>
                 </div>
@@ -382,7 +382,7 @@ class ChasetApp {
                                     <div class="flex-1">
                                         <div class="flex items-center gap-3">
                                             <span class="text-white font-semibold">${tx.description}</span>
-                                            <span class="text-xs px-2 py-1 rounded bg-purple-500/30 text-purple-200">${tx.category}</span>
+                                            <span class="text-xs px-2 py-1 rounded bg-blue-500/30 text-blue-200">${tx.category}</span>
                                         </div>
                                         <p class="text-white/50 text-sm">${tx.date}</p>
                                     </div>
@@ -428,7 +428,7 @@ class ChasetApp {
                             class="px-4 py-2 rounded-lg bg-white/5 border border-white/20 text-black placeholder-gray-500 focus:outline-none focus:border-purple-500">
                     </div>
                     <button onclick="app.addCredential()" 
-                        class="w-full md:w-auto px-6 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-semibold flex items-center gap-2 justify-center transition-all">
+                        class="w-full md:w-auto px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold flex items-center gap-2 justify-center transition-all">
                         <i data-lucide="plus-circle"></i> Aggiungi
                     </button>
                 </div>
@@ -513,4 +513,5 @@ if (document.readyState === 'loading') {
     });
 } else {
     app = new ChasetApp();
+
 }
